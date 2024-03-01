@@ -44,7 +44,7 @@
 	width: 90%;
 	height: 20%;
 	border: 1px solid black;
-	justify-content: right;
+	gap: 10px;
 	padding-right: 20px;
 	border-radius: 3%;
 	background-color: rgb(136, 177, 94);
