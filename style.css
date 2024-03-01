@@ -30,3 +30,12 @@
 	height: 100vh;
 	width: 100vw;
 }
+
+#container-small {
+	height: 50vh;
+	width: 15vw;
+	border: 1px solid black;
+	flex-direction: row;
+	border-radius: 15px;
+	background: rgb(166, 166, 166);
+}
