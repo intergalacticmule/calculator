@@ -8,3 +8,19 @@
 	margin: 0;
 	padding: 0;
 }
+
+.flex {
+	display: flex;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
