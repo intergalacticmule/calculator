@@ -2,3 +2,9 @@
 	font-family: calculator;
 	src: url(digital-7.ttf);
 }
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
