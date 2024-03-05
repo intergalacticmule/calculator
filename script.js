@@ -23,3 +23,16 @@ const divisionButton = document.querySelector("#division");
 
 const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".operator");
+
+function type(e) {
+	screenContent.firstElementChild.textContent += e.target.textContent;
+}
+
+function addNumbersEventListeners(buttons) {
+	buttons.forEach((button) => {
+		button.addEventListener("click", (e) => {
+			type(e);
+		});
+	});
+}
+addNumbersEventListeners(numberButtons);
