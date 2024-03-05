@@ -53,16 +53,17 @@
 }
 
 #screen-container > p {
-	height: 100%;
+	flex-direction: column-reverse;
+	text-align: right;
+	justify-content: center;
 	width: 100%;
-	overflow-y: auto;
+	height: 90%;
+	overflow-x: auto;
+	word-wrap: break-word;
 	scrollbar-width: thin;
 	scrollbar-color: #346403 #88b15e;
-	text-align: right;
-	word-wrap: break-word;
 	line-height: 0.7;
-	hyphens: auto;
-	margin: 10px 0px 10px 0px;
+	column-width: 50px;
 }
 
 #delete-container,
@@ -80,6 +81,11 @@ button {
 	color: white;
 	transition: all 0.1s ease-in-out;
 	font-size: 20px;
+}
+
+.delete {
+	border-radius: 8px;
+	width: 50%;
 }
 
 button:hover {
