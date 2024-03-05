@@ -20,3 +20,6 @@ const additionButton = document.querySelector("#addition");
 const subtractionButton = document.querySelector("#subtraction");
 const multiplicationButton = document.querySelector("#multiplication");
 const divisionButton = document.querySelector("#division");
+
+const numberButtons = document.querySelectorAll(".number");
+const operatorButtons = document.querySelectorAll(".operator");
