@@ -42,7 +42,7 @@
 
 #screen-container {
 	width: 90%;
-	height: 30%;
+	height: 25%;
 	border: 1px solid black;
 	border-radius: 3%;
 	background-color: rgb(136, 177, 94);
@@ -75,8 +75,8 @@
 
 button {
 	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+	width: 20%;
+	border-radius: 5px;
 	border: 1px solid black;
 	color: white;
 	transition: all 0.1s ease-in-out;
