@@ -25,7 +25,11 @@ const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".operator");
 
 function type(e) {
-	screenContent.firstElementChild.textContent += e.target.textContent;
+	if (screenContent.firstElementChild.textContent.length >= 14) {
+		return;
+	} else {
+		screenContent.firstElementChild.textContent += e.target.textContent;
+	}
 }
 
 function addNumbersEventListeners(buttons) {
@@ -35,4 +39,5 @@ function addNumbersEventListeners(buttons) {
 		});
 	});
 }
+
 addNumbersEventListeners(numberButtons);
