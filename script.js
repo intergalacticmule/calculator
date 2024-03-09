@@ -1,4 +1,5 @@
 const screenContent = document.querySelector("#screen-container");
+const screenChildren = document.querySelectorAll("p");
 
 const clearButton = document.querySelector("#clear-all");
 const deleteButton = document.querySelector("#delete");
@@ -24,11 +25,35 @@ const divisionButton = document.querySelector("#division");
 const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".operator");
 
+var activeField;
+
+var currentOperation;
+
 function type(e) {
-	if (screenContent.firstElementChild.textContent.length >= 14) {
+	activeField = document.querySelector(".active");
+	if (activeField.textContent.length >= 14) {
 		return;
 	} else {
-		screenContent.firstElementChild.textContent += e.target.textContent;
+		activeField.textContent += e.target.textContent;
+	}
+}
+
+function deleteLast() {
+	activeField.textContent = activeField.textContent.substring(
+		0,
+		activeField.textContent.length - 1
+	);
+}
+
+function clearAll() {
+	screenChildren.forEach((child) => (child.textContent = ""));
+}
+
+function setOperation(e) {
+	if (e.target.textContent !== "=") {
+		currentOperation = e.target.textContent;
+	} else {
+		return;
 	}
 }
 
@@ -40,4 +65,26 @@ function addNumbersEventListeners(buttons) {
 	});
 }
 
+function addOperationsEventListeners(buttons) {
+	buttons.forEach((button) => {
+		button.addEventListener("click", (e) => {
+			if (e.target !== equalsButton) {
+				if (currentOperation === undefined) {
+					setOperation(e);
+					type(e);
+				}
+				if (currentOperation !== undefined) {
+					deleteLast();
+					setOperation(e);
+					type(e);
+				}
+			}
+		});
+	});
+}
+
+deleteButton.addEventListener("click", deleteLast);
+clearButton.addEventListener("click", clearAll);
+
 addNumbersEventListeners(numberButtons);
+addOperationsEventListeners(operatorButtons);
