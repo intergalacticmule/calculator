@@ -104,6 +104,8 @@ button:active {
 	background-color: black;
 }
 
-.operator {
+.operator,
+#equals,
+#decimal {
 	background-color: rgb(104, 102, 102);
 }
